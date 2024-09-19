@@ -1,0 +1,20 @@
+<button (click)="aumentarEdad()"> + </button>
+<button (click)="disminuirEdad()"> - </button>
+
+<h1 [style.background] = "edad >= 18 ? 'green' : 'red'"
+    [style.color] = "'white'">
+    Tu edad es: {{edad}}
+</h1>
+
+@if (edad>=18){
+    <h2>Eres mayor de edad</h2>
+} @else {
+    <h2>Eres menor de edad</h2>
+}
+
+<h3>Lista de nombres</h3>
+<ul>
+    @for (nombre of nombres; track nombre; let indice = $index) {
+        <li>{{indice}} - {{nombre}}</li>
+    }
+</ul>
